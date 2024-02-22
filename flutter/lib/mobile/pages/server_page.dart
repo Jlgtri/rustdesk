@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_hbb/mobile/widgets/dialog.dart';
-import 'package:flutter_hbb/models/chat_model.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
+import 'package:support/mobile/widgets/dialog.dart';
+import 'package:support/models/chat_model.dart';
 
 import '../../common.dart';
 import '../../common/widgets/dialog.dart';
@@ -211,13 +211,14 @@ class ServiceNotRunningNotification extends StatelessWidget {
             ElevatedButton.icon(
                 icon: const Icon(Icons.play_arrow),
                 onPressed: () {
-                  if (gFFI.userModel.userName.value.isEmpty &&
-                      bind.mainGetLocalOption(key: "show-scam-warning") !=
-                          "N") {
-                    showScamWarning(context, serverModel);
-                  } else {
-                    serverModel.toggleService();
-                  }
+                  serverModel.toggleService();
+                  // if (gFFI.userModel.userName.value.isEmpty &&
+                  //     bind.mainGetLocalOption(key: "show-scam-warning") !=
+                  //         "N") {
+                  //   showScamWarning(context, serverModel);
+                  // } else {
+                  //   serverModel.toggleService();
+                  // }
                 },
                 label: Text(translate("Start service")))
           ],
@@ -363,10 +364,10 @@ class ScamWarningDialogState extends State<ScamWarningDialog> {
                             : () {
                                 Navigator.of(context).pop();
                                 _serverModel.toggleService();
-                                if (show_warning) {
-                                  bind.mainSetLocalOption(
-                                      key: "show-scam-warning", value: "N");
-                                }
+                                // if (show_warning) {
+                                //   bind.mainSetLocalOption(
+                                //       key: "show-scam-warning", value: "N");
+                                // }
                               },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blueAccent,
@@ -553,13 +554,15 @@ class _PermissionCheckerState extends State<PermissionChecker> {
                   .marginOnly(bottom: 8)
               : SizedBox.shrink(),
           PermissionRow(
-              translate("Screen Capture"),
-              serverModel.mediaOk,
-              !serverModel.mediaOk &&
-                      gFFI.userModel.userName.value.isEmpty &&
-                      bind.mainGetLocalOption(key: "show-scam-warning") != "N"
-                  ? () => showScamWarning(context, serverModel)
-                  : serverModel.toggleService),
+            translate("Screen Capture"),
+            serverModel.mediaOk,
+            serverModel.toggleService,
+            // !serverModel.mediaOk &&
+            //         gFFI.userModel.userName.value.isEmpty &&
+            //         bind.mainGetLocalOption(key: "show-scam-warning") != "N"
+            //     ? () => showScamWarning(context, serverModel)
+            //     : serverModel.toggleService
+          ),
           PermissionRow(translate("Input Control"), serverModel.inputOk,
               serverModel.toggleInput),
           PermissionRow(translate("Transfer file"), serverModel.fileOk,

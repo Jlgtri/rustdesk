@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_hbb/common/shared_state.dart';
-import 'package:flutter_hbb/common/widgets/toolbar.dart';
-import 'package:flutter_hbb/consts.dart';
-import 'package:flutter_hbb/mobile/widgets/gesture_help.dart';
-import 'package:flutter_hbb/models/chat_model.dart';
+import 'package:support/common/shared_state.dart';
+import 'package:support/common/widgets/toolbar.dart';
+import 'package:support/consts.dart';
+import 'package:support/mobile/widgets/gesture_help.dart';
+import 'package:support/models/chat_model.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';

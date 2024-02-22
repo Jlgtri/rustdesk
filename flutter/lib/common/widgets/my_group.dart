@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common/hbbs/hbbs.dart';
-import 'package:flutter_hbb/common/widgets/login.dart';
-import 'package:flutter_hbb/common/widgets/peers_view.dart';
+import 'package:support/common/hbbs/hbbs.dart';
+import 'package:support/common/widgets/login.dart';
+import 'package:support/common/widgets/peers_view.dart';
 import 'package:get/get.dart';
 
 import '../../common.dart';

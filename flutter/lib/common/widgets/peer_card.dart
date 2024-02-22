@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_hbb/common/widgets/dialog.dart';
-import 'package:flutter_hbb/consts.dart';
-import 'package:flutter_hbb/models/peer_tab_model.dart';
+import 'package:support/common/widgets/dialog.dart';
+import 'package:support/consts.dart';
+import 'package:support/models/peer_tab_model.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 

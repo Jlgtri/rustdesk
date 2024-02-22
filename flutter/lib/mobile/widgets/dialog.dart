@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common/widgets/setting_widgets.dart';
-import 'package:flutter_hbb/common/widgets/toolbar.dart';
+import 'package:support/common/widgets/setting_widgets.dart';
+import 'package:support/common/widgets/toolbar.dart';
 import 'package:get/get.dart';
 
 import '../../common.dart';

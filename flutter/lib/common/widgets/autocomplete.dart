@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common/formatter/id_formatter.dart';
+import 'package:support/common/formatter/id_formatter.dart';
 import '../../../models/platform_model.dart';
-import 'package:flutter_hbb/models/peer_model.dart';
-import 'package:flutter_hbb/common.dart';
-import 'package:flutter_hbb/common/widgets/peer_card.dart';
+import 'package:support/models/peer_model.dart';
+import 'package:support/common.dart';
+import 'package:support/common/widgets/peer_card.dart';
 
 Future<List<Peer>> getAllPeers() async {
   Map<String, dynamic> recentPeers = jsonDecode(bind.mainLoadRecentPeersSync());

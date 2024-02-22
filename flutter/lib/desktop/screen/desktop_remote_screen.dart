@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common.dart';
-import 'package:flutter_hbb/desktop/pages/remote_tab_page.dart';
-import 'package:flutter_hbb/models/platform_model.dart';
-import 'package:flutter_hbb/models/state_model.dart';
+import 'package:support/common.dart';
+import 'package:support/desktop/pages/remote_tab_page.dart';
+import 'package:support/models/platform_model.dart';
+import 'package:support/models/state_model.dart';
 import 'package:provider/provider.dart';
 
 /// multi-tab desktop remote screen
@@ -12,8 +12,8 @@ class DesktopRemoteScreen extends StatelessWidget {
   final Map<String, dynamic> params;
 
   DesktopRemoteScreen({Key? key, required this.params}) : super(key: key) {
-      bind.mainInitInputSource();
-      stateGlobal.getInputSource(force: true);
+    bind.mainInitInputSource();
+    stateGlobal.getInputSource(force: true);
   }
 
   @override

@@ -2,12 +2,12 @@ import 'dart:math';
 
 import 'package:dynamic_layouts/dynamic_layouts.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common/formatter/id_formatter.dart';
-import 'package:flutter_hbb/common/widgets/peer_card.dart';
-import 'package:flutter_hbb/common/widgets/peers_view.dart';
-import 'package:flutter_hbb/desktop/widgets/popup_menu.dart';
-import 'package:flutter_hbb/models/ab_model.dart';
-import 'package:flutter_hbb/models/platform_model.dart';
+import 'package:support/common/formatter/id_formatter.dart';
+import 'package:support/common/widgets/peer_card.dart';
+import 'package:support/common/widgets/peers_view.dart';
+import 'package:support/desktop/widgets/popup_menu.dart';
+import 'package:support/models/ab_model.dart';
+import 'package:support/models/platform_model.dart';
 import '../../desktop/widgets/material_mod_popup_menu.dart' as mod_menu;
 import 'package:get/get.dart';
 import 'package:flex_color_picker/flex_color_picker.dart';

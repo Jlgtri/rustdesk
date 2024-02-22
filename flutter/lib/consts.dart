@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common.dart';
-import 'package:flutter_hbb/models/state_model.dart';
+import 'package:support/common.dart';
+import 'package:support/models/state_model.dart';
 import 'package:get/get.dart';
 
 const int kMaxVirtualDisplayCount = 4;
@@ -23,7 +23,8 @@ const String kPlatformAdditionsHeadless = "headless";
 const String kPlatformAdditionsIsInstalled = "is_installed";
 const String kPlatformAdditionsVirtualDisplays = "virtual_displays";
 const String kPlatformAdditionsHasFileClipboard = "has_file_clipboard";
-const String kPlatformAdditionsSupportedPrivacyModeImpl = "supported_privacy_mode_impl";
+const String kPlatformAdditionsSupportedPrivacyModeImpl =
+    "supported_privacy_mode_impl";
 
 const String kPeerPlatformWindows = "Windows";
 const String kPeerPlatformLinux = "Linux";

@@ -3,14 +3,14 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_hbb/common.dart';
-import 'package:flutter_hbb/common/shared_state.dart';
-import 'package:flutter_hbb/common/widgets/dialog.dart';
-import 'package:flutter_hbb/consts.dart';
-import 'package:flutter_hbb/models/model.dart';
-import 'package:flutter_hbb/models/platform_model.dart';
-import 'package:flutter_hbb/models/desktop_render_texture.dart';
 import 'package:get/get.dart';
+import 'package:support/common.dart';
+import 'package:support/common/shared_state.dart';
+import 'package:support/common/widgets/dialog.dart';
+import 'package:support/consts.dart';
+import 'package:support/models/desktop_render_texture.dart';
+import 'package:support/models/model.dart';
+import 'package:support/models/platform_model.dart';
 
 bool isEditOsPassword = false;
 
@@ -219,8 +219,10 @@ List<TTextMenu> toolbarControls(BuildContext context, String id, FFI ffi) {
       bind.peerGetDefaultSessionsCount(id: id) == 1) {
     v.add(TTextMenu(
         child: Text(translate('Switch Sides')),
-        onPressed: () =>
-            showConfirmSwitchSidesDialog(sessionId, id, ffi.dialogManager)));
+        onPressed: () async {
+          await bind.sessionSwitchSides(sessionId: sessionId);
+          closeConnection(id: id);
+        }));
   }
   // refresh
   if (pi.version.isNotEmpty) {

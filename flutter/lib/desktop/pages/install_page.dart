@@ -1,9 +1,9 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common.dart';
-import 'package:flutter_hbb/desktop/widgets/tabbar_widget.dart';
-import 'package:flutter_hbb/models/platform_model.dart';
-import 'package:flutter_hbb/models/state_model.dart';
+import 'package:support/common.dart';
+import 'package:support/desktop/widgets/tabbar_widget.dart';
+import 'package:support/models/platform_model.dart';
+import 'package:support/models/state_model.dart';
 import 'package:get/get.dart';
 import 'package:path/path.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -248,6 +248,7 @@ class _InstallPageBodyState extends State<_InstallPageBody>
       if (desktopicon.value) args += ' desktopicon';
       bind.installInstallMe(options: args, path: controller.text);
     }
+
     do_install();
   }
 

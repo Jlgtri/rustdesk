@@ -5,17 +5,17 @@ import 'dart:ui' as ui;
 
 import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common.dart';
-import 'package:flutter_hbb/common/shared_state.dart';
-import 'package:flutter_hbb/consts.dart';
-import 'package:flutter_hbb/models/state_model.dart';
-import 'package:flutter_hbb/desktop/pages/remote_page.dart';
-import 'package:flutter_hbb/desktop/widgets/remote_toolbar.dart';
-import 'package:flutter_hbb/desktop/widgets/tabbar_widget.dart';
-import 'package:flutter_hbb/desktop/widgets/material_mod_popup_menu.dart'
+import 'package:support/common.dart';
+import 'package:support/common/shared_state.dart';
+import 'package:support/consts.dart';
+import 'package:support/models/state_model.dart';
+import 'package:support/desktop/pages/remote_page.dart';
+import 'package:support/desktop/widgets/remote_toolbar.dart';
+import 'package:support/desktop/widgets/tabbar_widget.dart';
+import 'package:support/desktop/widgets/material_mod_popup_menu.dart'
     as mod_menu;
-import 'package:flutter_hbb/desktop/widgets/popup_menu.dart';
-import 'package:flutter_hbb/utils/multi_window_manager.dart';
+import 'package:support/desktop/widgets/popup_menu.dart';
+import 'package:support/utils/multi_window_manager.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:bot_toast/bot_toast.dart';

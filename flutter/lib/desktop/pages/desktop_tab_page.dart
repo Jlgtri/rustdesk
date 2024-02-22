@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common.dart';
-import 'package:flutter_hbb/consts.dart';
-import 'package:flutter_hbb/desktop/pages/desktop_home_page.dart';
-import 'package:flutter_hbb/desktop/pages/desktop_setting_page.dart';
-import 'package:flutter_hbb/desktop/widgets/tabbar_widget.dart';
-import 'package:flutter_hbb/models/state_model.dart';
+import 'package:support/common.dart';
+import 'package:support/consts.dart';
+import 'package:support/desktop/pages/desktop_home_page.dart';
+import 'package:support/desktop/pages/desktop_setting_page.dart';
+import 'package:support/desktop/widgets/tabbar_widget.dart';
+import 'package:support/models/state_model.dart';
 import 'package:get/get.dart';
 import 'package:window_manager/window_manager.dart';
 

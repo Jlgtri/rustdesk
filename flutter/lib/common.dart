@@ -11,15 +11,15 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_hbb/common/formatter/id_formatter.dart';
-import 'package:flutter_hbb/desktop/widgets/refresh_wrapper.dart';
-import 'package:flutter_hbb/desktop/widgets/tabbar_widget.dart';
-import 'package:flutter_hbb/main.dart';
-import 'package:flutter_hbb/models/desktop_render_texture.dart';
-import 'package:flutter_hbb/models/peer_model.dart';
-import 'package:flutter_hbb/models/state_model.dart';
-import 'package:flutter_hbb/utils/multi_window_manager.dart';
-import 'package:flutter_hbb/utils/platform_channel.dart';
+import 'package:support/common/formatter/id_formatter.dart';
+import 'package:support/desktop/widgets/refresh_wrapper.dart';
+import 'package:support/desktop/widgets/tabbar_widget.dart';
+import 'package:support/main.dart';
+import 'package:support/models/desktop_render_texture.dart';
+import 'package:support/models/peer_model.dart';
+import 'package:support/models/state_model.dart';
+import 'package:support/utils/multi_window_manager.dart';
+import 'package:support/utils/platform_channel.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:uni_links/uni_links.dart';
@@ -2242,7 +2242,7 @@ Future<void> onActiveWindowChanged() async {
     } catch (err) {
       debugPrintStack(label: "$err");
     } finally {
-      debugPrint("Start closing RustDesk...");
+      debugPrint("Start closing Поддержка...");
       await windowManager.setPreventClose(false);
       await windowManager.close();
       if (Platform.isMacOS) {
@@ -2431,17 +2431,17 @@ int versionCmp(String v1, String v2) {
 String getWindowName({WindowType? overrideType}) {
   switch (overrideType ?? kWindowType) {
     case WindowType.Main:
-      return "RustDesk";
+      return "Поддержка";
     case WindowType.FileTransfer:
-      return "File Transfer - RustDesk";
+      return "Отправка Файлов - Поддержка";
     case WindowType.PortForward:
-      return "Port Forward - RustDesk";
+      return "Переадресация портов - Поддержка";
     case WindowType.RemoteDesktop:
-      return "Remote Desktop - RustDesk";
+      return "Удаленный рабочий стол - Поддержка";
     default:
       break;
   }
-  return "RustDesk";
+  return "Поддержка";
 }
 
 String getWindowNameWithId(String id, {WindowType? overrideType}) {

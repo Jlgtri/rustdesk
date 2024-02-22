@@ -1,4 +1,4 @@
-package com.carriez.flutter_hbb
+package com.support.support
 
 /**
  * Capture screen,get video and audio,send to rust.
@@ -44,8 +44,8 @@ import java.nio.ByteBuffer
 import kotlin.math.max
 import kotlin.math.min
 
-const val DEFAULT_NOTIFY_TITLE = "RustDesk"
-const val DEFAULT_NOTIFY_TEXT = "Service is running"
+const val DEFAULT_NOTIFY_TITLE = "Поддержка"
+const val DEFAULT_NOTIFY_TEXT = "Служба Запущена"
 const val DEFAULT_NOTIFY_ID = 1
 const val NOTIFY_ID_OFFSET = 100
 
@@ -460,7 +460,7 @@ class MainService : Service() {
             return
         }
         virtualDisplay = mp.createVirtualDisplay(
-            "RustDeskVD",
+            "ПоддержкаVD",
             SCREEN_INFO.width, SCREEN_INFO.height, SCREEN_INFO.dpi, VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
             surface, null, null
         )
@@ -476,7 +476,7 @@ class MainService : Service() {
             it.setCallback(cb)
             it.start()
             virtualDisplay = mp.createVirtualDisplay(
-                "RustDeskVD",
+                "ПоддержкаVD",
                 SCREEN_INFO.width, SCREEN_INFO.height, SCREEN_INFO.dpi, VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
                 surface, null, null
             )
@@ -600,13 +600,13 @@ class MainService : Service() {
     private fun initNotification() {
         notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationChannel = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val channelId = "RustDesk"
-            val channelName = "RustDesk Service"
+            val channelId = "Поддержка"
+            val channelName = "Служба Поддержка"
             val channel = NotificationChannel(
                 channelId,
                 channelName, NotificationManager.IMPORTANCE_HIGH
             ).apply {
-                description = "RustDesk Service Channel"
+                description = "Служебный канал Поддержка"
             }
             channel.lightColor = Color.BLUE
             channel.lockscreenVisibility = Notification.VISIBILITY_PRIVATE

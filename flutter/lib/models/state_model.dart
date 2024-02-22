@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common.dart';
+import 'package:support/common.dart';
 import 'package:get/get.dart';
 
 import '../consts.dart';

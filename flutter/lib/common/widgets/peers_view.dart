@@ -4,12 +4,12 @@ import 'dart:collection';
 import 'package:dynamic_layouts/dynamic_layouts.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/desktop/widgets/scroll_wrapper.dart';
+import 'package:support/desktop/widgets/scroll_wrapper.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import 'package:window_manager/window_manager.dart';
-import 'package:flutter_hbb/models/peer_tab_model.dart';
+import 'package:support/models/peer_tab_model.dart';
 
 import '../../common.dart';
 import '../../models/peer_model.dart';
@@ -196,18 +196,25 @@ class _PeersViewState extends State<_PeersView> with WindowListener {
               // No need to listen the currentTab change event.
               // Because the currentTab change event will trigger the peers change event,
               // and the peers change event will trigger _buildPeersView().
-              final currentTab = Provider.of<PeerTabModel>(context, listen: false).currentTab;
-              final hideAbTagsPanel = bind.mainGetLocalOption(key: "hideAbTagsPanel").isNotEmpty;
+              final currentTab =
+                  Provider.of<PeerTabModel>(context, listen: false).currentTab;
+              final hideAbTagsPanel =
+                  bind.mainGetLocalOption(key: "hideAbTagsPanel").isNotEmpty;
               return isDesktop
                   ? Obx(
                       () => SizedBox(
                         width: peerCardUiType.value != PeerUiType.list
                             ? 220
-                            : currentTab == PeerTabIndex.group.index || (currentTab == PeerTabIndex.ab.index && !hideAbTagsPanel)
-                              ? windowWidth - 390 :
-                                windowWidth - 227,
-                        height:
-                            peerCardUiType.value == PeerUiType.grid ? 140 : peerCardUiType.value != PeerUiType.list ? 42 : 45,
+                            : currentTab == PeerTabIndex.group.index ||
+                                    (currentTab == PeerTabIndex.ab.index &&
+                                        !hideAbTagsPanel)
+                                ? windowWidth - 390
+                                : windowWidth - 227,
+                        height: peerCardUiType.value == PeerUiType.grid
+                            ? 140
+                            : peerCardUiType.value != PeerUiType.list
+                                ? 42
+                                : 45,
                         child: visibilityChild,
                       ),
                     )

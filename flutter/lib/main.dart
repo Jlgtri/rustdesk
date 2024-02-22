@@ -6,16 +6,16 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_hbb/desktop/pages/desktop_tab_page.dart';
-import 'package:flutter_hbb/desktop/pages/install_page.dart';
-import 'package:flutter_hbb/desktop/pages/server_page.dart';
-import 'package:flutter_hbb/desktop/screen/desktop_file_transfer_screen.dart';
-import 'package:flutter_hbb/desktop/screen/desktop_port_forward_screen.dart';
-import 'package:flutter_hbb/desktop/screen/desktop_remote_screen.dart';
-import 'package:flutter_hbb/desktop/widgets/refresh_wrapper.dart';
-import 'package:flutter_hbb/models/state_model.dart';
-import 'package:flutter_hbb/plugin/handlers.dart';
-import 'package:flutter_hbb/utils/multi_window_manager.dart';
+import 'package:support/desktop/pages/desktop_tab_page.dart';
+import 'package:support/desktop/pages/install_page.dart';
+import 'package:support/desktop/pages/server_page.dart';
+import 'package:support/desktop/screen/desktop_file_transfer_screen.dart';
+import 'package:support/desktop/screen/desktop_port_forward_screen.dart';
+import 'package:support/desktop/screen/desktop_remote_screen.dart';
+import 'package:support/desktop/widgets/refresh_wrapper.dart';
+import 'package:support/models/state_model.dart';
+import 'package:support/plugin/handlers.dart';
+import 'package:support/utils/multi_window_manager.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -407,7 +407,7 @@ class _AppState extends State<App> {
         child: GetMaterialApp(
           navigatorKey: globalKey,
           debugShowCheckedModeBanner: false,
-          title: 'RustDesk',
+          title: 'Поддержка',
           theme: MyTheme.lightTheme,
           darkTheme: MyTheme.darkTheme,
           themeMode: MyTheme.currentThemeMode(),

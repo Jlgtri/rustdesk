@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/consts.dart';
+import 'package:support/consts.dart';
 
-import 'package:flutter_hbb/models/peer_model.dart';
+import 'package:support/models/peer_model.dart';
 
 import '../../models/platform_model.dart';
 

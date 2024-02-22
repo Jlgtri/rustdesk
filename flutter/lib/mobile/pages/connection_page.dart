@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:auto_size_text_field/auto_size_text_field.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common/formatter/id_formatter.dart';
+import 'package:support/common/formatter/id_formatter.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_hbb/models/peer_model.dart';
+import 'package:support/models/peer_model.dart';
 
 import '../../common.dart';
 import '../../common/widgets/login.dart';
@@ -392,7 +392,7 @@ class _WebMenuState extends State<WebMenu> {
               [
                 PopupMenuItem(
                   value: "about",
-                  child: Text('${translate('About')} RustDesk'),
+                  child: Text('${translate('About')} Поддержка'),
                 )
               ];
         },

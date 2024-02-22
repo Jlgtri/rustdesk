@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_hbb/consts.dart';
+import 'package:support/consts.dart';
 import 'package:flutter_improved_scrolling/flutter_improved_scrolling.dart';
 
 class DesktopScrollWrapper extends StatelessWidget {

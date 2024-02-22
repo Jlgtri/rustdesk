@@ -5,8 +5,8 @@ import 'package:desktop_multi_window/desktop_multi_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_hbb/consts.dart';
-import 'package:flutter_hbb/common.dart';
+import 'package:support/consts.dart';
+import 'package:support/common.dart';
 
 /// must keep the order
 // ignore: constant_identifier_names

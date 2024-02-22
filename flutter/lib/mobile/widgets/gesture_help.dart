@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hbb/common.dart';
+import 'package:support/common.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class GestureIcons {
