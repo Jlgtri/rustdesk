@@ -460,7 +460,7 @@ class MainService : Service() {
             return
         }
         virtualDisplay = mp.createVirtualDisplay(
-            "ПоддержкаVD",
+            "SupportVD",
             SCREEN_INFO.width, SCREEN_INFO.height, SCREEN_INFO.dpi, VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
             surface, null, null
         )
@@ -476,7 +476,7 @@ class MainService : Service() {
             it.setCallback(cb)
             it.start()
             virtualDisplay = mp.createVirtualDisplay(
-                "ПоддержкаVD",
+                "SupportVD",
                 SCREEN_INFO.width, SCREEN_INFO.height, SCREEN_INFO.dpi, VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
                 surface, null, null
             )
@@ -600,13 +600,13 @@ class MainService : Service() {
     private fun initNotification() {
         notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationChannel = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val channelId = "Поддержка"
-            val channelName = "Служба Поддержка"
+            val channelId = "Support"
+            val channelName = "Support Service"
             val channel = NotificationChannel(
                 channelId,
                 channelName, NotificationManager.IMPORTANCE_HIGH
             ).apply {
-                description = "Служебный канал Поддержка"
+                description = "Support Service Channel"
             }
             channel.lightColor = Color.BLUE
             channel.lockscreenVisibility = Notification.VISIBILITY_PRIVATE

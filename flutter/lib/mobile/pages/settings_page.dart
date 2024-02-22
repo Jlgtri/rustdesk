@@ -2,10 +2,10 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:support/common/widgets/setting_widgets.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:settings_ui/settings_ui.dart';
+import 'package:support/common/widgets/setting_widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -33,7 +33,7 @@ class SettingsPage extends StatefulWidget implements PageShape {
   State<SettingsPage> createState() => _SettingsState();
 }
 
-const url = 'https://rustdesk.com/';
+const url = 'https://support.com/';
 
 class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
   final _hasIgnoreBattery = androidVersion >= 26;
@@ -543,10 +543,10 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
                     await launchUrl(Uri.parse(url));
                   }
                 },
-                title: Text(translate("Version: ") + version),
+                title: Text("${translate("Version")}: $version"),
                 value: Padding(
                   padding: EdgeInsets.symmetric(vertical: 8),
-                  child: Text('rustdesk.com',
+                  child: Text('support.com',
                       style: TextStyle(
                         decoration: TextDecoration.underline,
                       )),
@@ -571,7 +571,7 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
             SettingsTile(
               title: Text(translate("Privacy Statement")),
               onPressed: (context) =>
-                  launchUrlString('https://rustdesk.com/privacy.html'),
+                  launchUrlString('https://support.com/privacy.html'),
               leading: Icon(Icons.privacy_tip),
             )
           ],
@@ -683,14 +683,14 @@ void showAbout(OverlayDialogManager dialogManager) {
         Text('Version: $version'),
         InkWell(
             onTap: () async {
-              const url = 'https://rustdesk.com/';
+              const url = 'https://support.com/';
               if (await canLaunchUrl(Uri.parse(url))) {
                 await launchUrl(Uri.parse(url));
               }
             },
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 8),
-              child: Text('rustdesk.com',
+              child: Text('support.com',
                   style: TextStyle(
                     decoration: TextDecoration.underline,
                   )),

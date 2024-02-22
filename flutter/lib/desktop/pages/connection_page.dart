@@ -463,7 +463,7 @@ class _ConnectionPageState extends State<ConnectionPage>
   }
 
   void onUsePublicServerGuide() {
-    const url = "https://rustdesk.com/pricing.html";
+    const url = "https://support.com/pricing.html";
     canLaunchUrlString(url).then((can) {
       if (can) {
         launchUrlString(url);
