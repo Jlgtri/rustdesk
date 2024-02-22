@@ -8,6 +8,7 @@ on:
 env:
   FLUTTER_VERSION: "3.16.9"
   FLUTTER_RUST_BRIDGE_VERSION: "1.80.1"
+  RUST_BACKTRACE: "full"
 
 jobs:
   generate_bridge:
@@ -51,7 +52,7 @@ jobs:
         with:
           toolchain: stable
           targets: ${{ matrix.job.target }}
-          components: ''
+          components: ""
 
       - uses: Swatinem/rust-cache@v2
         with:
